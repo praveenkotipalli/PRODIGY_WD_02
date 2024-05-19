@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s;
+}
+
+.container {
+    text-align: center;
+    background: var(--container-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+
+.header h1 {
+    color: #333;
+    transition: color 0.3s;
+}
+
+#display {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.buttons button {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#start { background-color: #4CAF50; color: white; }
+#stop { background-color: #a92219; color: white; }
+#reset { background-color: #008CBA; color: white; }
+#lap { background-color: #be7b18; color: white; }
+
+#start:hover{
+    background-color: #00ff08;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+#stop:hover{
+    background-color: #ff1100;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+#reset:hover{
+    background-color: #00bfff;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+#lap:hover{
+    background-color: #ff9800;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+#laps {
+    list-style-type: none;
+    padding: 0;
+}
+
+#laps li {
+    margin: 5px 0;
+    padding: 5px;
+    background: var(--lap-bg);
+    border-radius: 5px;
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+    --bg-color: #f0f0f0;
+    --container-bg: white;
+    --text-color: black;
+    --lap-bg: #e0e0e0;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --container-bg: #1e1e1e;
+    --text-color: white;
+    --lap-bg: #333;
+}
+
+body.dark-mode .header h1 {
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+    
+    #display {
+        font-size: 1.5em;
+    }
+    
+    .buttons button {
+        padding: 5px 10px;
+        margin: 3px;
+    }
+}
+
+#theme-toggle:hover{
+    cursor: pointer;
+}
